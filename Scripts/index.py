@@ -16,26 +16,26 @@ st_lottie(animation)
 choice=st.sidebar.selectbox("My Menu", ("Home", "employee", "admin", "Tech Articles And Information"))
 if(choice == "Home"):
     st.markdown("<h1 style= 'text-align:center;color:brown;'>EMPLOYEE MANAGEMENT SYSTEM</h1>",unsafe_allow_html=True)
-    with open("animation_lkilepd9.json") as source:
+    with open("Scripts/animation_lkilepd9.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     
     st.markdown("<h1 style= 'text-align:center;color:green;'>WELCOME TO OUR PAGE</h1>",unsafe_allow_html=True)
-    with open("animation_lkilckhx.json") as source:
+    with open("Scripts/animation_lkilckhx.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     st.markdown("<h4 style= 'color:green;'>Hello this is an application, developed by Khushboo kumari as a training project.There is requirement in the industries for skills such as Database Management skills, Programming skills, Web Development skills and these skills get improved by working on these kinds of projects.It is database application which store data of employee such as name, Id of employee, address, salary of employee, number. </h4>",unsafe_allow_html=True)  
-    with open("animation_lkilv2e2.json") as source:
+    with open("Scripts/animation_lkilv2e2.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     st.markdown("<h3 style='color:yellow;'>Employee management is the process by which employers ensure workers perform their jobs to the best of their abilities so as to achieve business goals. It typically entails building and maintaining healthy relationships with employees, as well as monitoring their daily labor and measuring progress. In this way, employers can identify opportunities for improvement and recognize achievements.</h3>", unsafe_allow_html=True )
-    with open("animation_lkilw8zf.json") as source:
+    with open("Scripts/animation_lkilw8zf.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     
     st.markdown("<h3 style='color:red;'>Employee management systems are important because a business’s workforce is its greatest asset. Yet, despite this intrinsic value, employee engagement is sometimes overlooked because HR professionals are either too busy with administrative work or lack the integrations necessary to use their people data effectively. Technology can alleviate such burdens and afford employers more time to connect with workers and create strategic initiatives that will attract and retain talent.</h3>", unsafe_allow_html=True )
     
-    with open("animation_lkilx13e.json") as source:
+    with open("Scripts/animation_lkilx13e.json") as source:
         animation=json.load(source)
     st_lottie(animation)
 
@@ -45,7 +45,7 @@ if(choice == "Home"):
     st.image("https://i1.wp.com/juntrax.com/blog/wp-content/uploads/2021/01/Employee-Management-System.jpg?w=1600&ssl=1")
    
     st.markdown("<h3 style='text-align:center;color:purple;'>As an employee management system, (EMS) makes it easy to onboard new hires and oversee teams and projects. The intuitive system has many features for onboarding processes, recruitment pipelines, employee well-being, as well as development and learning.Managers and HR personnel can get a complete overview of their team’s daily performance. Thanks to this feature, you can centralize planning and coordination with hiring managers and get a high-level overview of employee performance to make data-backed decisions.</h3>", unsafe_allow_html=True )
-    with open("animation_lkilw2uo.json") as source:
+    with open("Scripts/animation_lkilw2uo.json") as source:
         animation=json.load(source)
     st_lottie(animation)
 
@@ -54,7 +54,7 @@ if(choice == "Home"):
 
 elif(choice=='employee'):
     st.markdown("<h1 style= 'text-align:center;color:brown;'>WELCOME TO EMPLOYEE BLOCK</h1>",unsafe_allow_html=True)
-    with open("animation_lki5fser.json") as source:
+    with open("Scripts/animation_lki5fser.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     if 'login' not in st.session_state:
@@ -74,13 +74,13 @@ elif(choice=='employee'):
             st.subheader("Incorrect ID or Password")
     if(st.session_state['login']==True):
         st.subheader("login Succesful")
-        with open("animation_lkgqgomw.json") as source:
+        with open("Scripts/animation_lkgqgomw.json") as source:
             animation=json.load(source)
         st_lottie(animation)
         choice2=st.selectbox("Features",("None", "view all employee detail", "employee entry timing", "employee work record", "Apply for leave", "Contact Form"))
         
         if(choice2=="view all employee detail"):
-            with open("animation_lkgptqjk.json") as source:
+            with open("Scripts/animation_lkgptqjk.json") as source:
                 animation=json.load(source)
             st_lottie(animation)
             mydb=mysql.connector.connect(host="localhost", user="root", password="khushboo",database="employee");
@@ -104,7 +104,7 @@ elif(choice=='employee'):
                 mydb.commit()
                 st.header("submittted successfully")
             btn3= st.button("Show details")
-            with open("animation_lkgqxt7w.json") as source:
+            with open("Scripts/animation_lkgqxt7w.json") as source:
                 animation=json.load(source)
             st_lottie(animation)
             if(btn3):
@@ -117,7 +117,7 @@ elif(choice=='employee'):
                 df=pd.DataFrame(data=l, columns=['emp_id', 'emp_day', 'emp_time'])
                 st.dataframe(df) 
         if(choice2=="employee work record"): 
-            with open("animation_lkgq12pz.json") as source:
+            with open("Scripts/animation_lkgq12pz.json") as source:
                 animation=json.load(source)
             st_lottie(animation)
             name=st.text_input("Enter Name")
@@ -141,7 +141,7 @@ elif(choice=='employee'):
                 df=pd.DataFrame(data=l, columns=['emp_name', 'emp_task', 'emp_time'])
                 st.dataframe(df)
         if(choice2=="Apply for leave"):
-            with open("animation_lkgqk5c0.json") as source:
+            with open("Scripts/animation_lkgqk5c0.json") as source:
                 animation=json.load(source)
             st_lottie(animation)
             eid=st.text_input("Enter emp id")
@@ -192,12 +192,12 @@ elif(choice=='employee'):
             def local_css(file_name):
                 with open(file_name) as f:
                     st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
-            local_css("C:\myproject\employee\Scripts\style\style.css")
+            local_css("Scripts\style\style.css")
        
             
 elif(choice=='admin'):
     st.markdown("<h1 style= 'text-align:center;color:brown;'>WELCOME TO ADMIN BLOCK</h1>",unsafe_allow_html=True)
-    with open("animation_lkild0rd.json") as source:
+    with open("Scripts/animation_lkild0rd.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     if 'login2' not in st.session_state:
@@ -217,14 +217,14 @@ elif(choice=='admin'):
             st.subheader("Incorrect ID or Password")
     if(st.session_state['login2']==True):
         st.subheader("login Succesful")
-        with open("animation_lkgteqzg.json") as source:
+        with open("Scripts/animation_lkgteqzg.json") as source:
             animation=json.load(source)
         st_lottie(animation)
         choice2=st.selectbox("Features",("None", "ADD EMPLOYEE DETAILS", "JOB DESCRIPTION", "COMPANY PRODUCTION"))
         if(choice2=="ADD EMPLOYEE DETAILS"):
             
             st.markdown("<h1 style= 'text-align:center;color:brown;'>Add Employee</h1>",unsafe_allow_html=True)
-            with open("animation_lkgptqjk.json") as source:
+            with open("Scripts/animation_lkgptqjk.json") as source:
                 animation=json.load(source)
             st_lottie(animation)
             
@@ -257,7 +257,7 @@ elif(choice=='admin'):
                 st.dataframe(df)   
 
         if(choice2=="COMPANY PRODUCTION"):
-            with open("animation_lkim2912.json") as source:
+            with open("Scripts/animation_lkim2912.json") as source:
                 animation=json.load(source)
             st_lottie(animation)
             st.write("Chart Of GME Stoke Price")
@@ -316,12 +316,12 @@ elif(choice=='admin'):
             
 elif(choice=='Tech Articles And Information'):
     st.markdown("<h1>Latest Articles and Information</h1>", unsafe_allow_html=True)
-    with open("animation_lkgtgih5.json") as source:
+    with open("Scripts/animation_lkgtgih5.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     st.header(":mailbox: Python")
     st.markdown('<iframe src="http://tdc-www.harvard.edu/Python.pdf" width="100%" height="1200px"></iframe>', unsafe_allow_html=True)
-    with open("animation_lkgteqzg.json") as source:
+    with open("Scripts/animation_lkgteqzg.json") as source:
         animation=json.load(source)
     st_lottie(animation)
     st.header(":mailbox: Java")
