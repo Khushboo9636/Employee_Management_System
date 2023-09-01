@@ -10,7 +10,7 @@ from streamlit_lottie import st_lottie
 x=np.linspace(0,10,100)
 bar_x=np.array([1,2,3,4,5])
 st.set_page_config(page_title='Employee Management System',page_icon='random')
-with open("animation_lkfz9kt5.json") as source:
+with open("Scripts/animation_lkfz9kt5.json") as source:
     animation=json.load(source)
 st_lottie(animation)
 choice=st.sidebar.selectbox("My Menu", ("Home", "employee", "admin", "Tech Articles And Information"))
